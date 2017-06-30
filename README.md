@@ -1,3 +1,13 @@
+# Concentration
+
+* Take turns flipping cards over to find a match.
+* 1 match = 10 points.
+* If you miss a match it's the next players turn.
+* Game ends when all cards are flipped.
+* Refresh to restart.
+
+
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
