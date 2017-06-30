@@ -1,4 +1,20 @@
+import shuffle from 'shuffle-array';
 import * as types from '../actions/action-types';
+
+const CARDS = [
+  { id: 1, active: false, matched: false, face: 'src/assets/diamond.jpg' },
+  { id: 2, active: false, matched: false, face: 'src/assets/circle.jpg' },
+  { id: 3, active: false, matched: false, face: 'src/assets/cube.jpg' },
+  { id: 4, active: false, matched: false, face: 'src/assets/squares.jpg' },
+  { id: 5, active: false, matched: false, face: 'src/assets/spiral.jpg' },
+  { id: 6, active: false, matched: false, face: 'src/assets/lattice.jpg' },
+  { id: 7, active: false, matched: false, face: 'src/assets/diamond.jpg' },
+  { id: 8, active: false, matched: false, face: 'src/assets/circle.jpg' },
+  { id: 9, active: false, matched: false, face: 'src/assets/cube.jpg' },
+  { id: 10, active: false, matched: false, face: 'src/assets/squares.jpg' },
+  { id: 11, active: false, matched: false, face: 'src/assets/spiral.jpg' },
+  { id: 12, active: false, matched: false, face: 'src/assets/lattice.jpg' }
+];
 
 const INITIAL_STATE = {
   players: [
@@ -15,20 +31,7 @@ const INITIAL_STATE = {
   clicks: 0,
   shouldChangePlayer: false,
 
-  cards: [
-    { id: 1, active: false, matched: false, face: 'src/assets/diamond.jpg' },
-    { id: 2, active: false, matched: false, face: 'src/assets/circle.jpg' },
-    { id: 3, active: false, matched: false, face: 'src/assets/cube.jpg' },
-    { id: 4, active: false, matched: false, face: 'src/assets/squares.jpg' },
-    { id: 5, active: false, matched: false, face: 'src/assets/spiral.jpg' },
-    { id: 6, active: false, matched: false, face: 'src/assets/lattice.jpg' },
-    { id: 7, active: false, matched: false, face: 'src/assets/diamond.jpg' },
-    { id: 8, active: false, matched: false, face: 'src/assets/circle.jpg' },
-    { id: 9, active: false, matched: false, face: 'src/assets/cube.jpg' },
-    { id: 10, active: false, matched: false, face: 'src/assets/squares.jpg' },
-    { id: 11, active: false, matched: false, face: 'src/assets/spiral.jpg' },
-    { id: 12, active: false, matched: false, face: 'src/assets/lattice.jpg' },
-  ]
+  cards: shuffle(CARDS),
 }
 
 export default (state = INITIAL_STATE, action) => {

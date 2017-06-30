@@ -13,7 +13,6 @@ class CardGrid extends Component {
     this.props.clickCard(index)
   }
   renderGrid() {
-    // need to shuffle cards otherwise its too easy
     return this.props.cards.map((card, index) => {
       return (
         <Card
